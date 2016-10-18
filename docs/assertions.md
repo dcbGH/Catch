@@ -47,7 +47,7 @@ REQUIRE( performComputation() == Approx( 2.1 ) );
 By default a small epsilon value is used that covers many simple cases of rounding errors. When this is insufficent the epsilon value (the amount within which a difference either way is ignored) can be specified by calling the ```epsilon()``` method on the ```Approx``` instance. e.g.:
 
 ```
-REQUIRE( 22/7 == Approx( 3.141 ).epsilon( 0.01 ) );
+REQUIRE( (float)22/7 == Approx( 3.141 ).epsilon( 0.01 ) );
 ```
 
 When dealing with very large or very small numbers it can be useful to specify a scale, which can be achieved by calling the ```scale()``` method on the ```Approx``` instance.
